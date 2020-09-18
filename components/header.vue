@@ -4,21 +4,17 @@
       <div class="columns">
         <div class="column is-12">
           <div class="container content">
-            <i class="is-large fab fa-discord"></i>
-            <i class="is-large fas fa-code"></i>
-            <h1 class="title">Code <em>All</em> The Things</h1>
+
+            <h1 class="title">メインタイトル</h1>
             <h3 class="subtitle">
-              Collection of code goodies for next-level dev
+              サブタイトル（説明）
             </h3>
             <a
               href="https://github.com/BulmaTemplates/bulma-templates"
               target="_blank"
               class="button is-primary is-large"
             >
-              <span class="icon">
-                <i class="fab fa-github"></i>
-              </span>
-              <span>Github</span>
+              <span>コメントはこちら</span>
             </a>
           </div>
         </div>
