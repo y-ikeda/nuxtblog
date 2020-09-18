@@ -1,0 +1,29 @@
+<template>
+  <div class="content is-medium">
+    <h3 class="title is-3">カテゴリー：{{category_title}}</h3>
+    <listbox v-for="(post, index) in get_posts()" :key="index" :post="post"></listbox>
+
+  </div>
+</template>
+<script>
+import listbox from "~/components/listbox.vue";
+export default {
+  components: {
+    listbox
+  },
+  methods: {
+    get_posts: function() {
+      this.$store.dispatch("global/fetchCategory");
+      return this.$store.state.global.posts;
+    }
+
+  },
+  computed: {
+    category_title:function(){
+      const catkey = this.$store.state.global.key;
+      const cattitle = this.$store.state.category.category.find((val)=> val.value == catkey)
+      return cattitle.key
+    }
+  }
+};
+</script>
